@@ -24,25 +24,17 @@ $('#text-input').keypress(function (e) {
   	var url = "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=" + inptVal + "&callback=?";
 
   	$('#results').empty();
-    $('#form').submit(console.log(inptVal + " " + url));
 
 	$.getJSON(url, function(json) {
-		
-		console.log(json);
 
 		$('#form').addClass('top');
 		$('#results').addClass('top');
 
 		$.each(json.query.pages, function (i) {
 			$('#results').append("<div class='result-box'><a href='https://en.wikipedia.org/?curid=" + json.query.pages[i].pageid + "' target='_blank'><h2>" + json.query.pages[i].title + "</h2><p>" + json.query.pages[i].extract + "</p></a></div>");
-	                        // console.log(json.query.pages[i].pageid);
-	                        // console.log(json.query.pages[i].title);
-	                        // console.log(json.query.pages[i].extract);
 	  });
 
   });
-
-    console.log("got this far - finally it is sorta working!");
 
   }
 });
