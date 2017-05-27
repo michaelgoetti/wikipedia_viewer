@@ -120,7 +120,7 @@ body {
   top: 90%;
   transition: top 300ms ease-in-out;
   margin: 0px auto;
-  padding: 0px 90px;
+  padding: 0px 5%;
 }
 
 #results.top {
