@@ -8,12 +8,12 @@ body {
 }
 
 #random {
-  top: 38%;
+  top: calc(50% - 70px);
   left: calc(50% - 110px);
 }
 
 #instructions {
-  top: 53%;
+  top: calc(50% + 20px);
   left: calc(50% - 74px);
   cursor: default;
   user-select: none;
@@ -50,7 +50,7 @@ body {
 }
 
 #form.top {
-  top: 10%;
+  top: 60px;
 }
 
 #form.reset {
@@ -145,6 +145,13 @@ body {
 a, a:hover, a:visited, a:active, a:focus {
   color: white;
   text-decoration: none;
+}
+
+.texts.active a, .texts.active a:hover, .texts.active a:visited, .texts.active a:active, .texts.active a:focus {
+  color: rgb(23,11,52);
+  text-decoration: none;
+  cursor: default;
+  user-select: none;
 }
 
 
